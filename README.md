@@ -86,4 +86,3 @@ Diese Anwendung wurde als 4-Stunden-Programmieraufgabe entwickelt mit Fokus auf:
 - Grundlegende Taschenrechner-Funktionalität
 - Fehlerbehandlung
 - Testabdeckung
-
