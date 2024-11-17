@@ -12,13 +12,13 @@
 
 ## Live Demo
 
-Sie können den Taschenrechner hier ausprobieren: [Live Demo](http://your-demo-link.com)
+Sie können den Taschenrechner hier ausprobieren: [Live Demo](https://tourmaline-twilight-68a5a8.netlify.app/)
 
 ## Installation
 
 1. Klonen Sie das Repository:
 ```bash
-git clone https://github.com/your-username/calculator.git
+git clone https://github.com/neslihko/calculator-js
 cd calculator
 ```
 
@@ -86,3 +86,4 @@ Diese Anwendung wurde als 4-Stunden-Programmieraufgabe entwickelt mit Fokus auf:
 - Grundlegende Taschenrechner-Funktionalität
 - Fehlerbehandlung
 - Testabdeckung
+
