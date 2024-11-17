@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: right;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background: #eee;
+        }
+
+        .number-pad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column: 1 / span 3;
+            gap: 5px;
+        }
+
+        .operators {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column: 4;
+            gap: 5px;
+        }
+
+        .operator {
+            background: #f0f0f0;
+        }
+
+        .equals {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .equals:hover {
+            background: #45a049;
+        }
+
+        .clear {
+            background: #f44336;
+            color: white;
+        }
+
+        .clear:hover {
+            background: #da190b;
+        }
+
+        .wide {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <!-- Obere Reihe -->
+            <button class="clear wide" onclick="Calculator.clearAll()">C</button>
+            <button onclick="Calculator.backspace()">←</button>
+            <button class="operator" onclick="Calculator.addNumber('/')">/</button>
+
+            <!-- Zahlenfeld und Operatoren getrennt -->
+            <div class="number-pad">
+                <button onclick="Calculator.addNumber('7')">7</button>
+                <button onclick="Calculator.addNumber('8')">8</button>
+                <button onclick="Calculator.addNumber('9')">9</button>
+                <button onclick="Calculator.addNumber('4')">4</button>
+                <button onclick="Calculator.addNumber('5')">5</button>
+                <button onclick="Calculator.addNumber('6')">6</button>
+                <button onclick="Calculator.addNumber('1')">1</button>
+                <button onclick="Calculator.addNumber('2')">2</button>
+                <button onclick="Calculator.addNumber('3')">3</button>
+                <button class="wide" onclick="Calculator.addNumber('0')">0</button>
+                <button onclick="Calculator.addNumber(',')">,</button>
+            </div>
+
+            <!-- Operatoren rechts -->
+            <div class="operators">
+                <button class="operator" onclick="Calculator.addNumber('*')">×</button>
+                <button class="operator" onclick="Calculator.addNumber('-')">−</button>
+                <button class="operator" onclick="Calculator.addNumber('+')">+</button>
+                <button class="equals" onclick="Calculator.calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
